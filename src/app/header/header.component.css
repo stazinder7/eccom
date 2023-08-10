@@ -1,0 +1,15 @@
+header{height: 100px;border-block-end:0px solid rgba(var(--themeClr),0.2); inset-inline: 0;inset-block-start: 0;z-index: 10; transition: 0.5s ease-in-out;}
+.nav__item{color: inherit;}
+header.sticky{background-color: rgba(var(--whiteClr),1);height: 60px;}
+@media screen and (max-width:767px) {
+    ul.navigation {
+        flex-direction: column;
+        position: fixed;
+        inset-block: 0;
+        background: rgba(var(--whiteClr),1);
+        width: 280px;
+        inset-inline-end: 0;
+        padding-block: 50px;
+         padding-inline: 25px;
+    }
+}

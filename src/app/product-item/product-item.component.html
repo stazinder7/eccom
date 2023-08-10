@@ -1,0 +1,44 @@
+<div class="productItem item d-flex gap-20 flex-column" *ngFor="let items of products;let i = index">
+    <div class="productItem_img relative hidden">
+        <img src="{{items.img}}" alt="{{items.img}} " />
+        <ul class="productItem__action d-flex gap-15 flex-column block-center inline-center absolute">
+            <li class="d-flex block-center inline-center" style="--i:1"><span class="material-symbols-outlined"> favorite</span></li>
+            <li class="d-flex block-center inline-center" style="--i:2"><span class="material-symbols-outlined">visibility</span></li>
+            <li class="d-flex block-center inline-center" style="--i:3"><span class="material-symbols-outlined">add_shopping_cart</span></li>
+        </ul>
+    </div>
+    <div class="productItem_metaInfo d-flex gap-10 flex-column">
+        <p class="productItem_category fw-400">{{items.category}}</p>
+        <h3 class="productItem__title fw-800">{{items.name}}</h3>
+        <h5 class="productItem_price d-flex gap-15 block-center">
+            <span class="newprice fw-600 themeText">{{items.newprice}}</span>
+            <span class="oldprice fw-400">{{items.oldprice}}</span>
+        </h5>
+        <ul class="product__rating d-flex gap-5">
+            <li class="rating__list">
+                    <svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="14.105"
+                        height="14.732" viewBox="0 0 10.105 9.732">
+                        <path data-name="star - Copy"
+                            d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z"
+                            transform="translate(0 -0.018)" fill="currentColor"></path>
+                    </svg>
+            </li>
+            <li class="rating__list">
+                <svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="14.105"
+                    height="14.732" viewBox="0 0 10.105 9.732">
+                    <path data-name="star - Copy"
+                        d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z"
+                        transform="translate(0 -0.018)" fill="currentColor"></path>
+                </svg>
+        </li>
+        <li class="rating__list">
+            <svg class="rating__list--icon__svg" xmlns="http://www.w3.org/2000/svg" width="14.105"
+                height="14.732" viewBox="0 0 10.105 9.732">
+                <path data-name="star - Copy"
+                    d="M9.837,3.5,6.73,3.039,5.338.179a.335.335,0,0,0-.571,0L3.375,3.039.268,3.5a.3.3,0,0,0-.178.514L2.347,6.242,1.813,9.4a.314.314,0,0,0,.464.316L5.052,8.232,7.827,9.712A.314.314,0,0,0,8.292,9.4L7.758,6.242l2.257-2.231A.3.3,0,0,0,9.837,3.5Z"
+                    transform="translate(0 -0.018)" fill="currentColor"></path>
+            </svg>
+    </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<header class="d-flex block-center fixed">
+  <div class="container d-flex inline-space-between">
+    <a routerLink="/" class="navbrand"> Logo </a>
+    <nav class="">
+      <div class="toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="navigation d-flex gap-20 xs-d-none">
+        <li *ngFor="let Items of nav">
+          <a routerLink="{{ Items.route }}" class="nav__item">{{
+            Items.items
+          }}</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="sideNav d-flex gap-20">
+      <li><input type="search" class="formInput d-none" /><span class="material-symbols-outlined"> search</span></li>
+      <li><span class="material-symbols-outlined">person</span></li>
+      <li><span class="material-symbols-outlined">shopping_cart</span></li>
+    </ul>
+  </div>
+</header>
