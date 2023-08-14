@@ -1,18 +1,18 @@
 <div class="productItem item d-flex gap-20 flex-column" *ngFor="let items of products;let i = index">
     <div class="productItem_img relative hidden">
-        <img src="{{items.img}}" alt="{{items.img}} " />
+        <img src="{{items.image}}" alt="{{items.image}} " />
         <ul class="productItem__action d-flex gap-15 flex-column block-center inline-center absolute">
             <li class="d-flex block-center inline-center" style="--i:1"><span class="material-symbols-outlined"> favorite</span></li>
-            <li class="d-flex block-center inline-center" style="--i:2"><span class="material-symbols-outlined">visibility</span></li>
+            <li class="d-flex block-center inline-center" style="--i:2" (click)="pro_view(items)"><span class="material-symbols-outlined">visibility</span></li>
             <li class="d-flex block-center inline-center" style="--i:3"><span class="material-symbols-outlined">add_shopping_cart</span></li>
         </ul>
     </div>
     <div class="productItem_metaInfo d-flex gap-10 flex-column">
         <p class="productItem_category fw-400">{{items.category}}</p>
-        <h3 class="productItem__title fw-800">{{items.name}}</h3>
+        <h3 class="productItem__title fw-800">{{items.title}}</h3>
         <h5 class="productItem_price d-flex gap-15 block-center">
-            <span class="newprice fw-600 themeText">{{items.newprice}}</span>
-            <span class="oldprice fw-400">{{items.oldprice}}</span>
+            <span class="newprice fw-600 themeText">{{items.price}}</span>
+            <!-- <span class="oldprice fw-400">{{items.oldprice}}</span> -->
         </h5>
         <ul class="product__rating d-flex gap-5">
             <li class="rating__list">
@@ -42,3 +42,4 @@
         </ul>
     </div>
 </div>
+

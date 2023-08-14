@@ -8,10 +8,16 @@ declare var jQuery: any;
 
 export class HomeComponent implements OnInit {
 
+  newItem:any;
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  pro_view(newItem: any){
+    console.log("parent data",newItem)
+  }
+
   ngAfterViewInit() {
     jQuery('.carouselArrow__left').click(function () {
       jQuery('.latestProduct').trigger('prev.owl.carousel');
