@@ -1,6 +1,6 @@
 .banner {
     background-color: rgba(var(--themeClr), 0.2);
-    min-height: 100dvh;
+    height: calc(100vh - 70px);
 
     & .container {
         grid-template-columns: 1fr 1fr;
@@ -27,6 +27,7 @@
     isolation: isolate;
 }
 
+.banner_graphic img{max-height:90%;}
 .banner_graphic::after {
     aspect-ratio: 1/1;
     width: 100%;
@@ -59,11 +60,11 @@
         }
     }
   }
-  /* .products > * {
+  .products > * {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
     gap: 30px;
-} */
+}
 .latstArrival__Content{width: 300px;}
 .products{width: calc(100% - 320px);}
 

@@ -17,26 +17,26 @@ export class ProductItemComponent implements OnInit {
     console.log(productItems)
     this.openModal = true;
   }
-  // products:any;
+  products:any;
   url: string = 'https://fakestoreapi.com/products';
   constructor() { }
 
   ngOnInit(): void {
-    // fetch(this.url).then(res => res.json())
-    // .then(json => {
-    //   this.products = json;
-    // });
+    fetch(this.url).then(res => res.json())
+    .then(json => {
+      this.products = json;
+    });
   }
-  products = [
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/product8.png', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/product8.png', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
-    { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' }
-  ]
+  // products = [
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/product8.png', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/product8.png', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },
+  //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' }
+  // ]
   
 
 }

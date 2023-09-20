@@ -9,7 +9,7 @@
     </div>
     <div class="productItem_metaInfo d-flex gap-10 flex-column">
         <p class="productItem_category fw-400">{{items.category}}</p>
-        <h3 class="productItem__title fw-800">{{items.title}}</h3>
+        <h3 class="productItem__title fw-800 pointer elipsis hidden nowrap" routerLink="productdetail"> {{items.title}}</h3>
         <h5 class="productItem_price d-flex gap-15 block-center">
             <span class="newprice fw-600 themeText">{{items.price}}</span>
             <!-- <span class="oldprice fw-400">{{items.oldprice}}</span> -->
