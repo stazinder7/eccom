@@ -8,13 +8,13 @@ declare var jQuery: any;
 
 export class HomeComponent implements OnInit {
 
-  newItem:any;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  pro_view(newItem: any){
+  viewItem(newItem: any){
     console.log("parent data",newItem)
   }
 

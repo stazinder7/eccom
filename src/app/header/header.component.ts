@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   nav=[
     {items:'Home',route:''},
     {items:'About us',route:''},
-    {items:'Products',route:''},
+    {items:'Products',route:'/products'},
     {items:'Patner with us',route:''},
     {items:'Contact us',route:''},
     // {items:'Login',route:''},

@@ -1,4 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ProductsService } from '../services/products.service';
+import {productsJson} from '../../products'
 
 
 @Component({
@@ -9,23 +11,29 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class ProductItemComponent implements OnInit {
   proView: any;
   openModal:boolean=false;
+
   @Output() newItemEvent = new EventEmitter<any>();
 
-  pro_view(productItems: any) {
+  pro_view(productItems:any) {
     // this.proView = productItems;
     this.newItemEvent.emit(productItems)
-    console.log(productItems)
+    // console.log(productItems)
+    this._productservices.productdata=productItems;
     this.openModal = true;
   }
   products:any;
-  url: string = 'https://fakestoreapi.com/products';
-  constructor() { }
+  // url: string = 'https://fakestoreapi.com/products';
+  url :string ='';
+  constructor(public _productservices:ProductsService) { 
+  }
 
   ngOnInit(): void {
-    fetch(this.url).then(res => res.json())
-    .then(json => {
-      this.products = json;
-    });
+    this.products = productsJson;
+    // fetch(this.url).then(res => res.json())
+    // .then(json => {
+    //   this.products = json;
+    // });
+
   }
   // products = [
   //   { image: 'https://risingtheme.com/html/demo-suruchi-v1/suruchi/assets/img/product/big-product2.jpg', title: 'Oversize Cotton Dress', category: 'Women', price: '$110', oldprice: '$120', rating: '4' },

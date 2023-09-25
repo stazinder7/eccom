@@ -47,11 +47,11 @@
       </ul>
     </div>
     <div class="products">
-      <div class="app-product-item owl-carousel latestProduct"></div>
+      <div class="app-product-item owl-carousel latestProduct" (newItemEvent)="viewItem($event)"></div>
     </div>
   </div>
 </section>
-<section class="py-100 BestSeller coloredBg">
+<section class="py-100 BestSeller coloredBg" >
   <div class="container d-flex gap-20 flex-wrap">
     <div class="latstArrival__Content d-flex flex-column gap-20">
       <h2 class="title gardientText">BestSeller</h2>
@@ -80,7 +80,7 @@
       </ul>
     </div>
     <div class="products">
-      <div class="app-product-item owl-carousel BestSellerProduct" (newItemEvent)="pro_view($event)"></div>
+      <div class="app-product-item owl-carousel BestSellerProduct" (newItemEvent)="viewItem($event)"></div>
     </div>
   </div>
 </section>

@@ -1,6 +1,6 @@
 <div class="productItem item d-flex gap-20 flex-column" *ngFor="let items of products;let i = index">
     <div class="productItem_img relative hidden">
-        <img src="{{items.image}}" alt="{{items.image}} " />
+        <img src="{{items.thumbnail}}" alt="{{items.thumbnail}} " class="cover" />
         <ul class="productItem__action d-flex gap-15 flex-column block-center inline-center absolute">
             <li class="d-flex block-center inline-center" style="--i:1"><span class="material-symbols-outlined"> favorite</span></li>
             <li class="d-flex block-center inline-center" style="--i:2" (click)="pro_view(items)"><span class="material-symbols-outlined">visibility</span></li>
@@ -9,7 +9,7 @@
     </div>
     <div class="productItem_metaInfo d-flex gap-10 flex-column">
         <p class="productItem_category fw-400">{{items.category}}</p>
-        <h3 class="productItem__title fw-800 pointer elipsis hidden nowrap" routerLink="productdetail"> {{items.title}}</h3>
+        <h3 class="productItem__title fw-800 pointer elipsis hidden nowrap" (click)="pro_view(items)" routerLink="productdetail"> {{items.title}}</h3>
         <h5 class="productItem_price d-flex gap-15 block-center">
             <span class="newprice fw-600 themeText">{{items.price}}</span>
             <!-- <span class="oldprice fw-400">{{items.oldprice}}</span> -->
