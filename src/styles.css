@@ -29,6 +29,7 @@ body{min-height:100dvh;text-rendering:optimizeSpeed;line-height:1.5;color:rgba(v
 .d-flex{display:flex}
 .d-grid{display:grid}
 .d-none{display:none}
+.d-inline-block{display:inline-block}
 .flex-column{flex-direction:column}
 .flex-wrap{flex-wrap: wrap;}
 .flex-row{flex-direction:row}
@@ -50,7 +51,9 @@ body{min-height:100dvh;text-rendering:optimizeSpeed;line-height:1.5;color:rgba(v
 .gap-30{gap:30px}
 .gap-50{gap:50px}
 .py-100{padding-block: 100px;}
-
+.mye-0{margin-block-end: 0px;}
+.mye-10{margin-block-end: 10px;}
+.mye-20{margin-block-end: 20px;}
 .text-center{text-align: center;}
 
 .fw-100{font-weight: 100;}
@@ -88,18 +91,21 @@ body{min-height:100dvh;text-rendering:optimizeSpeed;line-height:1.5;color:rgba(v
 .col-lg-11 {max-width: 91.6666666667%;}
 .col-lg-12 {max-width: 100%;}
 
+
 .elipsis{text-overflow: ellipsis;}
 .nowrap{white-space: nowrap}
 .hidden{overflow: hidden;}
 .cover{object-fit:cover}
 .contain{object-fit:contain}
-.btn{letter-spacing:1px;padding:8px 20px;border:none;background:rgba(var(--themeClr),1);display:flex;align-items:center;font-size:14px;color:rgba(var(--whiteClr),1);position:relative}
+.btn{padding:8px 20px;border:none;background:rgba(var(--themeClr),1);display:flex;align-items:center;justify-content: center; font-size:14px;color:rgba(var(--whiteClr),1);position:relative}
 .btn--xl{min-height:56px;padding-inline:30px;font-size:18px}
+.btn--l{min-height:48px;font-size:16px}
 .hoverEffect{margin-inline-start:5px}
 .hoverEffect::before,.hoverEffect::after{transition:width .5s ease-in-out;content:'';border-block:2px solid rgba(var(--themeClr),1);position:absolute;inset-inline-start:-5px;width:20px;height:calc(100% + 10px);z-index:-1;border-inline-start:2px solid rgba(var(--themeClr),1)}
 .hoverEffect::before{inset-inline-start:auto;inset-inline-end:-5px;border-inline-end:2px solid rgba(var(--themeClr),1);border-inline-start:0}
 .hoverEffect:hover::after,.hoverEffect:hover::before{width: 60%;}
 
+.btn-round{border-radius: 50px;}
 .pointer{cursor: pointer;}
 .title{font-size: 36px;;}
 .subtitle{font-size: 18px; color: rgba(var(--textClr),0.5); ;}
@@ -144,4 +150,83 @@ body{min-height:100dvh;text-rendering:optimizeSpeed;line-height:1.5;color:rgba(v
   color: rgba(var(--whiteClr),1);
   inset-block-start: -30px;
   cursor: pointer;
+}
+
+body:has(app-signup) app-header ,
+body:has(app-signin) app-header {
+  display: none !important;
+}
+
+
+
+.infosection{background-color: rgba(var(--themeClr),1);}
+section.signup {background: rgba(var(--themeClr),0.1);min-height: 100vh;padding:50px 20px;}
+.infosection svg {opacity: 0.1;}
+.infosection svg + svg{inset-inline-end: 0;}
+.signip__wrapper{background: rgba(var(--whiteClr),1);width: min(100%,950px);border-radius: 10px;grid-template-columns: 1.2fr minmax(340px,1fr);}
+.form__label{font-size: 14px;}
+.form__input {width: 100%;height: 48px;border-radius: 8px;border: none;outline: 2px solid rgba(var(--textClr),0.1);padding-inline: 20px;
+    &:is(:hover,:focus){outline-color:  rgba(var(--themeClr),1);}
+}
+.form__checkbox {appearance: none;width: 24px;
+    height: 24px;
+    outline: 2px solid rgba(var(--textClr),0.1);
+    border-radius: 4px;
+    &:is(:hover,:focus){
+        outline-color:  rgba(var(--themeClr),1);
+        
+    }
+    &:is(:checked){
+        background-color: rgba(var(--themeClr),1);
+        outline-color:  rgba(var(--themeClr),1);
+    }
+}
+.form__checkbox:is(:checked) + label::after {
+    position: absolute;
+    border-block-end: 2px solid #fff;
+    border-inline-end: 2px solid #fff;
+    width: 8px;
+    height: 15px;
+    content: '';
+    rotate: 45deg;
+    left: -25px;
+    z-index: 10;
+    top: 1px;
+
+}
+
+.formsection {
+    padding: 60px;
+}
+.pattern {
+    width: 220px;
+    height: 192px;
+    background: radial-gradient(black 2px, transparent 0);
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    inset-inline-end: 0;
+    opacity: 0.1;
+    inset-block-start: 0;
+}
+.formOuter h3 {
+    font-size: 32px;
+}
+.content {
+    color: #fff;
+    width: min(100%,330px);
+    margin-inline: auto;
+}
+
+.content h3 {
+    font-size: 3rem;
+    line-height: 1;
+   
+}
+span.errormsg {
+  color: red;
+
+  inset-inline-start: 0;
+  inset-block-start: calc(100% + 5px);
+  font-size: 13px;
+
 }

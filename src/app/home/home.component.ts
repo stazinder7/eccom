@@ -8,14 +8,20 @@ declare var jQuery: any;
 
 export class HomeComponent implements OnInit {
 
-
+  showProduct1: boolean = false;
+  productInfo: any = {};
   constructor() { }
-
+  closeModal() {
+    this.showProduct1 = false;
+  }
   ngOnInit(): void {
+
   }
 
-  viewItem(newItem: any){
-    console.log("parent data",newItem)
+  viewItem(newItem: any) {
+    this.showProduct1 = newItem.visiblePopup;
+    this.productInfo = newItem.productItems;
+    console.log("parent data", this.productInfo)
   }
 
   ngAfterViewInit() {

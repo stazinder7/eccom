@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
+import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     ProductItemComponent,
     ProductDetailComponent,
-    ProductsComponent
+    ProductsComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

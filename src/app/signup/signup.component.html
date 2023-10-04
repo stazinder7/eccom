@@ -1,0 +1,67 @@
+<section class="signup d-grid place-center">
+    <div class="signip__wrapper hidden d-grid">
+        <div class="infosection relative d-grid place-center">
+            <svg viewBox="0 0 960 540" width="100%" height="100%" preserveAspectRatio="xMidYMax slice"
+                xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 pointer-events-none ng-tns-c2186735283-81">
+                <g fill="none" stroke="currentColor" stroke-width="100"
+                    class="text-gray-700 opacity-25 ng-tns-c2186735283-81">
+                    <circle r="234" cx="196" cy="23" class="ng-tns-c2186735283-81"></circle>
+                    <circle r="234" cx="790" cy="491" class="ng-tns-c2186735283-81"></circle>
+                </g>
+            </svg>
+            <div class="pattern absolute"></div>
+            <!-- <svg viewBox="0 0 220 192" width="220" height="192" fill="none" class="absolute -top-16 -right-16 text-gray-700 ng-tns-c2186735283-81"><defs class="ng-tns-c2186735283-81"><pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse" class="ng-tns-c2186735283-81"><rect x="0" y="0" width="4" height="4" fill="currentColor" class="ng-tns-c2186735283-81"></rect></pattern></defs><rect width="220" height="192" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" class="ng-tns-c2186735283-81"></rect></svg> -->
+            <div class="content d-grid gap-20">
+                <h3 class="fw-900">Welcome to
+                    our community</h3>
+                <p class="fw-300">Fuse helps developers to build organized and well coded dashboards full of beautiful and rich
+                    modules. Join us and start building your application today.</p>
+            </div>
+        </div>
+        <div class="formsection">
+            <div class="formOuter">
+                <h3 class="fw-900">Sign up</h3>
+                <p class="mye-20">Already have an account? <a routerLink="/signin" class="themeText">Sign in</a></p>
+                <form class="d-grid gap-30" #signupForm="ngForm" novalidate (ngSubmit)="onSubmit()">
+                    <!-- {{signupForm.value | json}}
+                    {{signupModel | json}} -->
+                    <div class="form__group relative">
+                        <label for="fullname_id" class="form__label fw-600 d-inline-block mye-10">Full name <span
+                                class="asterik">*</span></label>
+                        <input type="text" class="form__input" required id="fullname_id" name="fullname_name" [(ngModel)]="signupModel.fullname_name"/>
+                        <span class="errormsg absolute fw-600"></span>
+                    </div>
+                    <div class="form__group relative">
+                        <label for="email_id" class="form__label fw-600 d-inline-block mye-10">Email address <span
+                                class="asterik">*</span></label>
+                        <input type="email" class="form__input" required id="email_id" name="email_name" [(ngModel)]="signupModel.email_name"/>
+                        <span class="errormsg absolute fw-600"></span>
+                    </div>
+                    <div class="form__group relative">
+                        <label for="password_id" class="form__label fw-600 d-inline-block mye-10">Password<span
+                                class="asterik">*</span></label>
+                        <input type="password" class="form__input" required id="password_id" name="password_name" [(ngModel)]="signupModel.password_name"/>
+                        <span class="errormsg absolute fw-600"></span>
+                    </div>
+                    <div class="form__group relative">
+                        <label for="company_id" class="form__label fw-600 d-inline-block mye-10">Company<span
+                                class="asterik">*</span></label>
+                        <input type="text" class="form__input" required id="company_id" name="company_name" [(ngModel)]="signupModel.company_name" />
+                        <span class="errormsg absolute fw-600"></span>
+                    </div>
+                    <div class="form__group relative">
+                        <p class="d-flex gap-10 block-center">
+                            <input type="checkbox" class="form__checkbox" required id="declaration_id"
+                                name="declaration_name" [(ngModel)]="signupModel.declaration_name"/>
+                            <label for="declaration_id" class="form__label fw-600 d-flex  d-flex gap-5 pointer relative">I agree
+                                with<a class="themeText">Terms</a>and<a href="" class="themeText">Privacy
+                                    Policy</a></label>
+                        </p>
+                        <span class="errormsg absolute fw-600"></span>
+                    </div>
+                    <button class="btn btn-round btn--l">Create your free account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

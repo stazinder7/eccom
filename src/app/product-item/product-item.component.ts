@@ -11,13 +11,16 @@ import {productsJson} from '../../products'
 export class ProductItemComponent implements OnInit {
   proView: any;
   openModal:boolean=false;
+  showProduct:boolean=false;
 
   @Output() newItemEvent = new EventEmitter<any>();
 
   pro_view(productItems:any) {
+    this.showProduct =  !this.showProduct;
     // this.proView = productItems;
-    this.newItemEvent.emit(productItems)
+    this.newItemEvent.emit({productItems,visiblePopup:this.showProduct})
     // console.log(productItems)
+    
     this._productservices.productdata=productItems;
     this.openModal = true;
   }
